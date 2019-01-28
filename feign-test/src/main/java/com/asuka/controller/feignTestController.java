@@ -16,6 +16,7 @@ public class feignTestController {
     @GetMapping("/feignTest")
     String feignTest()
     {
+        String a ="ad";
        return feignTestService.feignTest(1).toString();
     }
 
