@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate.naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+  application:
+    name: channel-server
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://35.220.159.226:3306/picInfo
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
