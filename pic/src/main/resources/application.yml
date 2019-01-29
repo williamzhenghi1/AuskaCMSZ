@@ -10,6 +10,14 @@ spring:
     password: 123456
     url: jdbc:mysql://35.220.159.226:3306/picInfo
     driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    suffix: .html
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    cache: false
 
 eureka:
   client:
@@ -18,3 +26,4 @@ eureka:
 
 server:
   port: 8666
+

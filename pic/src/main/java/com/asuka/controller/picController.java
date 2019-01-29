@@ -15,7 +15,8 @@ public class picController {
     @Autowired
     HeadPicServiceImpl headPicService;
 
-    @GetMapping("/test")
+
+    @GetMapping("/")
     public String a()
     {
         return "a";
@@ -27,5 +28,6 @@ public class picController {
     {
         return headPicService.getOneHeadPic("1");
     }
+
 
 }
