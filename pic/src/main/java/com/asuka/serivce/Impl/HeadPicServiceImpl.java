@@ -14,7 +14,7 @@ public class HeadPicServiceImpl implements HeadPicSerivce {
     HeadPicRepositry headPicRepositry;
 
     @Override
-    public HeadPic getOneHeadPic(Integer integer) {
+    public HeadPic getOneHeadPic(String integer) {
         return headPicRepositry.getByPicId(integer);
     }
 }

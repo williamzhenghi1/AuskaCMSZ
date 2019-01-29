@@ -25,7 +25,7 @@ public class picController {
     @RequestMapping(value="/ftest",method= RequestMethod.POST)
     HeadPic aad()
     {
-        return new HeadPic();
+        return headPicService.getOneHeadPic("1");
     }
 
 }

@@ -15,7 +15,7 @@ public class feignTestController {
     @Autowired
     FeignTestServiceImpl feignTestService;
 
-    @GetMapping("/feignTest")
+    @GetMapping("/m")
     String feignTest()
     {
         String a ="ad";
