@@ -1,4 +1,4 @@
-package com.asuka.pic;
+package com.asuka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,7 +9,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableEurekaClient
-@ComponentScan(basePackages = {"com.asuka.*"})
 @EnableJpaRepositories("com.asuka.Repositry")
 @EntityScan("com.asuka.pojo")
 public class PicApplication {

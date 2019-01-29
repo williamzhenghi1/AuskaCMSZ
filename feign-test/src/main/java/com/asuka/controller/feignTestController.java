@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class feignTestController {
 
+
+
     @Autowired
     FeignTestServiceImpl feignTestService;
 
@@ -19,6 +21,8 @@ public class feignTestController {
         String a ="ad";
        return feignTestService.feignTest(1).toString();
     }
+
+
 
     @GetMapping("/test")
     String sad()

@@ -4,11 +4,13 @@ import com.asuka.Pojo.HeadPic;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Service
-@FeignClient(name = "pic-server")
+@FeignClient(name = "PIC-SERVER")
 public interface FeignTestServiceImpl {
 
-    @GetMapping("/feignTest")
+    @RequestMapping(value = "ftest", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
     HeadPic feignTest(Integer integer);
 }
