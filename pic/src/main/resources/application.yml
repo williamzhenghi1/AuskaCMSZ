@@ -4,7 +4,7 @@ spring:
     hibernate.naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
   application:
-    name: pic-server
+    name: PIC-SERVER
   datasource:
     username: root
     password: 123456
@@ -18,12 +18,18 @@ spring:
     servlet:
       content-type: text/html
     cache: false
-
+  resources:
+    #        add-mappings: true
+    #        chain.cache: true
+    #        chain.enabled: true
+    #        chain.gzipped: true
+    #        chain.html-application-cache: true
+    static-locations: classpath:/resources/static/
+  #    cache:
+  #      period: 3600s
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-
 server:
   port: 8666
-

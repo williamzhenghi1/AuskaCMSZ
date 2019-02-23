@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .checked {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav class="navbar navbar-light" style="background-color: white; margin-bottom: 0px">
+        <img class="navbar-brand" src="http://vebuck-hk.oss-cn-hongkong.aliyuncs.com/logo.png?Expires=1548756425&OSSAccessKeyId=TMP.AQGsGgkajfElx5l6j5OyaM9JvKAD-_C2B7cLqBwibyDDJYgP8-uQYK_crt1RMC4CFQDc39-sux3v92sHHcdhyJdblR4NPwIVALOdmiljT8BzaYNgdNxo9dR5P36N&Signature=T88%2FSZdfgj%2FT6i4YQVUvJKZgxS4%3D"/>
+        <ul class="nav navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"><img src="/pic/game.svg" style="size: 10px;width: 28px;height: 28px;"/>Game Center <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><img src="/pic/store.svg" style="size: 10px;width: 25px;height: 25px;"/>Store</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><img src="/pic/creditCard.svg" style="size: 10px;width: 28px;height: 28px;"/>Credit Card</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><img src="/pic/app.svg" style="size: 10px;width: 28px;height: 28px;"/>Download App</a>
+            </li>
+            <li class="nav-item" style="margin-top: 9px">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn" type="submit" style="background-color: white"><img src="/pic/search.svg" style="size: 10px;width: 28px;height: 28px;"/></button>
+                </form>
+            </li>
+        </ul>
+
+
+        <ul class="nav navbar-right">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"><img src="/pic/login.svg" style="size: 10px;width: 28px;height: 28px;"/>Sign In/Up <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+
+    </nav>
+    <nav class="navbar navbar-light" style="border-top: red solid 1px">
+
+        <ul class="nav navbar-nav">
+            <li class="nav-item active" style="margin-left: 50px">
+                <a class="nav-link" style="color: red;" href="#">Index <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Bangumi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">zhe♂xue</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+        </ul>
+    </nav>
+    </nav>
+
+
+    <br/>
+        <!--/*@thymesVar id="comList" type="java.util.List<com.asuka.Pojo.CommicPic>"*/-->
+        <div th:each="comicPic,comicPicStat:${comList}">
+            <img th:src="${comicPic.getUrl()}"/>
+        </div>
+    <br/>
+
+
+
+    <div class="row">
+        <h4>
+           <p style="font-family: '微软雅黑 Light'"> 沙雕网友评论:</p>
+        </h4>
+    </div>
+
+    <br/>
+    <div>
+        xxx
+    </div>
+    </div>
+</div>
+</body>
+</html>

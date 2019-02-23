@@ -14,10 +14,11 @@ import java.util.Date;
 public class CommicPic {
     @Id
     @Column(name = "PicID")
-    private String picId;
+    private Integer picId;
     private String Url;
     private String commicId;
     private String location;
+    private int page;
     private Integer Type;
     private Date release_time;
     private Date update_time;
